@@ -1,24 +1,20 @@
+
+// ----------- Imports and Setup --------------------
+
 import { GoogleGenAI, Type } from '@google/genai';
 import readlineSync from "readline-sync"
 import 'dotenv/config'
 
 
 
-// Configure the client
+// --------------- Creating Gemini Client ------------------
 const ai = new GoogleGenAI({});
 
-// // 
-// {
-// coin:"bitcoin",
-// curr: 'inr'
-// }
 
-// const a = {
-//     coin: "bitcoin",
-//     curr: 'inr'
-// }
 
-// crypto currency tool
+
+
+// --------------- Crypto Tool Function -----------------
 async function cryptoCurrency({ coin }) {
 
     const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&ids=${coin}`);
@@ -28,7 +24,7 @@ async function cryptoCurrency({ coin }) {
 
 
 
-// weather tool
+// --------------- Weather Tool Function ----------------
 async function weatherInformation({ city }) {
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=d6a3bcd7a43c4ed59c2155208252404&q=${city}&aqi=no`);
     const data = await response.json();
@@ -39,12 +35,11 @@ async function weatherInformation({ city }) {
 
 
 
-
-// cryptcurrency wale ki information
-
+// ------------------ Tool Definitions for Gemini -------------
+//  Crypto tool schema
 const cryptoInfo = {
     name: "cryptoCurrency",
-    description: "We can give you the current price or other information related to cryptocurrency like bitcoin and ethereum etc",
+    description: "we can give you the current price or other information related to cryptocurrency like bitcoin and ethereum etc",
     parameters: {
         type: Type.OBJECT,
         properties: {
@@ -53,11 +48,12 @@ const cryptoInfo = {
                 description: "It will be the name of the cryptocurrency like bitcoin, ethereum, etc"
             }
         },
-        required: ['coin']
+        required: ['coin'],
     }
 }
 
 
+//  Weather tool schema
 const weatherInfo = {
     name: "weatherInformation",
     description: "You can get the current weather information of any city like london, goa etc",
@@ -69,26 +65,29 @@ const weatherInfo = {
                 description: "Name of the city for which I have to fetch weather information like london, goa etc"
             }
         },
-        required: ['city']
+        required: ['city'],
     }
 }
 
 
+// -------------- Register Tools with Gemini --------------
 const tools = [{
     functionDeclarations: [cryptoInfo, weatherInfo]
 }];
 
 
+//   ---------------- Map Tool Names to Functions -------------
 const toolFunctions = {
     "cryptoCurrency": cryptoCurrency,
     "weatherInformation": weatherInformation
 }
 
+// --------------------  Conversation History -----------------
 const History = [];
 
 
+// ----------------------- runAgent() — Core AI Logic -----------------
 async function runAgent() {
-
 
     while (true) {
 
@@ -146,6 +145,8 @@ async function runAgent() {
 }
 
 
+
+// -------------------  Main Loop (Chat System) ---------------
 while (true) {
 
     const question = readlineSync.question('Ask me anything: ');
@@ -161,10 +162,3 @@ while (true) {
 
     await runAgent();
 }
-
-
-
-
-
-
-
