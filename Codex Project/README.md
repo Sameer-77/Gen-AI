@@ -11,7 +11,7 @@ An autonomous multi-agent system that takes a software requirement, plans it, wr
 &nbsp;
 <br>
 
-- 1. Prerequisites
+### 1. Prerequisites
  - Node.js 18+ installed
  - A Gemini API key ([get one free](https://aistudio.google.com/api-keys))
  -(Optional) Redis for state persistence: docker run -d -p 6379:6379 redis:latest
