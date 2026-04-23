@@ -60,13 +60,13 @@ node src/index.js
 
 
 ## 🧪 Testing
-
+```
 # Test 1: Graph skeleton (no API key needed)  
 npm run test:graph  
 
 # Test 2: PM Agent (requires GEMINI_API_KEY)  
 npm run test:pm  
-
+```
 
 ### Test 1: Graph Skeleton
 
