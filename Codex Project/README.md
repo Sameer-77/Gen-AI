@@ -76,7 +76,7 @@ npm run test:pm
 - Checkpointing saves state  
 
 
-### Test 2: PM Agent
+### Test 2: PM Agent ``` (npm run test:pm) ```
 
 - Generates clarifying questions  
 - Produces full project specification  
