@@ -68,7 +68,7 @@ npm run test:graph
 npm run test:pm  
 ```
 
-### Test 1: Graph Skeleton
+### Test 1: Graph Skeleton ```  (npm run test:graph) ```
 
 - State flows correctly through nodes  
 - Conditional routing works  
