@@ -113,10 +113,12 @@ ai-dev-team/
 
 ### The Graph
 
+```
 START → [pmAgent] ←→ [humanInput]  
         ↓ (spec_ready)  
         END  
 
+```
 
 ### State
 
