@@ -86,24 +86,27 @@ npm run test:pm
 
 ## 📂 Project Structure
 
-ai-dev-team/  
-├── src/  
-│   ├── index.js                `#` Main entry point (CLI)
-│   ├── agents/  
-│   │   └── pmAgent.js          `#` PM Agent — requirement → spec
-│   ├── nodes/  
-│   │   └── humanInput.js        `#` Terminal input for Q&A
-│   ├── config/  
-│   │   ├── state.js              `#` Complete V2 state definition (30 nodes)
-│   │   └── graph.js              `#` LangGraph wiring + checkpointer
-│   └── utils/  
-│       ├── gemini.js              `#` Gemini API wrapper + token tracking
-│       └── tokenTracker.js        `#` Token usage display
-├── tests/  
-│   ├── test-graph-skeleton.js      `#` Mock test — no API needed
-│   └── test-pm-agent.js            `#` Real API test
-├── .env.example                    `#` Environment template
-└── package.json  
+```bash
+ai-dev-team/
+├── src/
+│   ├── index.js # Main entry point (CLI)
+│   ├── agents/
+│   │   └── pmAgent.js # PM Agent — requirement → spec
+│   ├── nodes/
+│   │   └── humanInput.js # Terminal input for Q&A
+│   ├── config/
+│   │   ├── state.js # Complete V2 state definition (30 nodes)
+│   │   └── graph.js # LangGraph wiring + checkpointer
+│   └── utils/
+│       ├── gemini.js # Gemini API wrapper + token tracking
+│       └── tokenTracker.js # Token usage display
+├── tests/
+│   ├── test-graph-skeleton.js # Mock test — no API needed
+│   └── test-pm-agent.js # Real API test
+├── .env.example # Environment template
+└── package.json
+
+```
 
 
 ## ⚙️ How It Works (First Principles)
