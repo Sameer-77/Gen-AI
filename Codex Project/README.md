@@ -88,21 +88,21 @@ npm run test:pm
 
 ai-dev-team/  
 ├── src/  
-│   ├── index.js  
+│   ├── index.js                `#` Main entry point (CLI)
 │   ├── agents/  
-│   │   └── pmAgent.js  
+│   │   └── pmAgent.js          `#` PM Agent — requirement → spec
 │   ├── nodes/  
-│   │   └── humanInput.js  
+│   │   └── humanInput.js        `#` Terminal input for Q&A
 │   ├── config/  
-│   │   ├── state.js  
-│   │   └── graph.js  
+│   │   ├── state.js              `#` Complete V2 state definition (30 nodes)
+│   │   └── graph.js              `#` LangGraph wiring + checkpointer
 │   └── utils/  
-│       ├── gemini.js  
-│       └── tokenTracker.js  
+│       ├── gemini.js              `#` Gemini API wrapper + token tracking
+│       └── tokenTracker.js        `#` Token usage display
 ├── tests/  
-│   ├── test-graph-skeleton.js  
-│   └── test-pm-agent.js  
-├── .env.example  
+│   ├── test-graph-skeleton.js      `#` Mock test — no API needed
+│   └── test-pm-agent.js            `#` Real API test
+├── .env.example                    `#` Environment template
 └── package.json  
 
 
