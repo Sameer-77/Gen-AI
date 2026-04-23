@@ -41,13 +41,14 @@ cp .env.example .env
 
 
 ### 3. Run
-
+```
 # Option 1: Pass requirement directly  
 node src/index.js "Build a todo app with categories and due dates"  
 
 # Option 2: Interactive mode  
 node src/index.js  
 
+```
 
 ### 4. What Happens
 
