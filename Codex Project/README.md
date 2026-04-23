@@ -142,4 +142,4 @@ Phase 7 — React Frontend Dashboard
 
 ## 👨‍💻 Built By
 
-Coder Army × Claude — February 2026
+Shaik Sameer Basha x Claude — April 2026
