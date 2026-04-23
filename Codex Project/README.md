@@ -141,13 +141,14 @@ No direct function calls.
 
 
 ## 🚀 What's Next
-
+```
 Phase 2 — Architect Agent + Validator  
 Phase 3 — Planner Agent + Docker Sandbox  
 Phase 4 — Context Builder + Coder Agent  
 Phase 5 — Reviewer + Debugger  
 Phase 6 — Feedback Loop + Deploy Agent  
 Phase 7 — React Frontend Dashboard  
+```
 
 ## 👨‍💻 Built By
 
