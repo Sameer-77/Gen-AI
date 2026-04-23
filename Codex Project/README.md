@@ -25,16 +25,19 @@ docker run -d -p 6379:6379 redis:latest
 
 ### 2. Setup
 
-# Clone/copy the project  
-cd ai-dev-team  
+```bash
+# Clone/copy the project
+cd ai-dev-team
 
-# Install dependencies  
-npm install  
+# Install dependencies
+npm install
 
-# Create your .env file  
-cp .env.example .env  
+# Create your .env file
+cp .env.example .env
 
-# Add your GEMINI_API_KEY inside .env  
+# Edit .env and add your GEMINI_API_KEY
+
+```
 
 
 ### 3. Run
